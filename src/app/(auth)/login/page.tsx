@@ -9,24 +9,20 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      {/* Top Logo Section */}
-      <div className="flex justify-center items-center py-10">
-        <div className="w-20 h-20 rounded-full bg-black flex items-center justify-center">
-          <span className="text-white text-3xl font-bold">👑</span>
+    <div className="h-screen bg-white flex flex-col items-center justify-center px-6">
+      {/* Logo + Welcome Section */}
+      <div className="flex flex-col items-center mb-6">
+        <div className="w-30 h-30 rounded-full flex items-center justify-center mb-4">
+          <img src="mm-logo.png" alt="" />
         </div>
-      </div>
-
-      {/* Content */}
-      <div className="flex-1 flex flex-col justify-center px-6 sm:px-8 max-w-md w-full mx-auto">
-        {/* Welcome text */}
-        <h2 className="text-center text-2xl font-semibold text-purple-900">
-          Welcome back!
-        </h2>
-        <p className="text-center text-gray-500 text-sm mb-6">
+        <h2 className="text-3xl font-bold text-[#91308d]">Welcome back!</h2>
+        <p className="text-gray-500 text-sm mt-1">
           Enter your credentials to continue.
         </p>
+      </div>
 
+      {/* Form Section */}
+      <div className="w-full max-w-md">
         {/* Email */}
         <input
           type="email"
@@ -54,14 +50,14 @@ export default function LoginPage() {
         <div className="flex justify-end mb-4">
           <Link
             href="/forgot-password"
-            className="text-sm text-purple-700 hover:underline"
+            className="text-sm text-[#91308d] hover:underline"
           >
             Forgot Password?
           </Link>
         </div>
 
         {/* Login button */}
-        <button className="w-full bg-purple-800 text-white py-3 rounded-lg hover:bg-purple-900 transition">
+        <button className="w-full bg-[#91308d] text-white py-3 rounded-lg hover:bg-purple-900 transition">
           Log in
         </button>
 

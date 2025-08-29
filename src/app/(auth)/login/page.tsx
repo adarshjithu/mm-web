@@ -1,4 +1,4 @@
-// app/login/page.tsx (Next.js 13+ App Router)
+// app/login/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -9,18 +9,18 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="flex items-center justify-center h-full bg-gray-100">
-      {/* Login Card */}
-      <div className="w-full max-w-md p-8 bg-white rounded-2xl ">
-        {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <div className="w-20 h-20 rounded-full bg-black flex items-center justify-center">
-            <span className="text-white text-3xl font-bold">👑</span>
-          </div>
+    <div className="min-h-screen bg-white flex flex-col">
+      {/* Top Logo Section */}
+      <div className="flex justify-center items-center py-10">
+        <div className="w-20 h-20 rounded-full bg-black flex items-center justify-center">
+          <span className="text-white text-3xl font-bold">👑</span>
         </div>
+      </div>
 
+      {/* Content */}
+      <div className="flex-1 flex flex-col justify-center px-6 sm:px-8 max-w-md w-full mx-auto">
         {/* Welcome text */}
-        <h2 className="text-center text-xl font-semibold text-purple-900">
+        <h2 className="text-center text-2xl font-semibold text-purple-900">
           Welcome back!
         </h2>
         <p className="text-center text-gray-500 text-sm mb-6">
@@ -52,7 +52,10 @@ export default function LoginPage() {
 
         {/* Forgot password */}
         <div className="flex justify-end mb-4">
-          <Link href="/forgot-password" className="text-sm text-purple-700 hover:underline">
+          <Link
+            href="/forgot-password"
+            className="text-sm text-purple-700 hover:underline"
+          >
             Forgot Password?
           </Link>
         </div>
@@ -64,7 +67,7 @@ export default function LoginPage() {
 
         {/* Terms */}
         <p className="mt-6 text-xs text-center text-gray-500">
-          By logging, you are agreeing with our{" "}
+          By logging in, you agree to our{" "}
           <Link href="/terms" className="underline">
             Terms of Use
           </Link>{" "}
@@ -77,7 +80,10 @@ export default function LoginPage() {
         {/* Register link */}
         <p className="mt-4 text-sm text-center text-gray-600">
           Don’t have an account?{" "}
-          <Link href="/register" className="text-purple-800 font-medium hover:underline">
+          <Link
+            href="/register"
+            className="text-purple-800 font-medium hover:underline"
+          >
             Register
           </Link>
         </p>
